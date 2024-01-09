@@ -1,6 +1,10 @@
 import React from "react";
 import { ChevronDown, ChevronUp } from "../icons";
 
-export const CartItem = () => {
-  return <div>CartItems</div>;
+export const CartItem = ({ id, image, price, title, amount }) => {
+  return (
+    <article className="cart-item">
+      <img src={image} alt="title" />
+    </article>
+  );
 };
