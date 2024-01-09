@@ -25,8 +25,8 @@ const CartContainer = () => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>
+      <hr />
       <footer>
-        <hr />
         <div className="cart-total">
           <h4>
             total <span>${total}</span>
