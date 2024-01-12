@@ -3,11 +3,13 @@ import { ChevronDown, ChevronUp } from "../icons";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../cart/cartSlice";
 
-export const CartItem = ({ id, image, price, title, amount }) => {
+export const CartItem = ({ id, img, price, title, amount }) => {
   const dispatch = useDispatch();
+  console.log(img);
+  console.log(id);
   return (
     <article className="cart-item">
-      <img src={image} alt="title" />
+      <img src={img} alt="title" />
       <div>
         <h4>{title}</h4>
         <h4 className="item-price">${price}</h4>
