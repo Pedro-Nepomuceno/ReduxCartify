@@ -14,7 +14,7 @@ export const CartItem = ({ id, img, price, title, amount }) => {
         <button
           className="remove-btn"
           onClick={() => {
-            dispatch(removeItem(id));
+            dispatch(removeItem({ id }));
           }}
         >
           Remove
@@ -24,7 +24,7 @@ export const CartItem = ({ id, img, price, title, amount }) => {
         <button
           className="amount-btn"
           onClick={() => {
-            dispatch(increase(id));
+            dispatch(increase({ id }));
           }}
         >
           <ChevronUp />
