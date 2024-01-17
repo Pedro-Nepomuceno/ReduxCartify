@@ -7,6 +7,8 @@ import Modal from "./components/Modal";
 
 function App() {
   const { cartItems } = useSelector((store) => store.cart);
+  const { isOpen } = useSelector((store) => store.modal);
+
   const dispatch = useDispatch();
 
   const handleCalculateTotals = useCallback(() => {
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <main>
-      <Modal />
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
     </main>
