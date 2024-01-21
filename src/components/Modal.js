@@ -1,7 +1,7 @@
 import React from "react";
-import modalSlice from "../features/modal/modalSlice";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../cart/cartSlice";
+import { closeModal } from "../features/modal/modalSlice";
 
 function Modal() {
   const dispatch = useDispatch();
@@ -15,12 +15,18 @@ function Modal() {
             type="button"
             className="btn confirm-btn"
             onClick={() => {
-              dispatch(clearCart);
+              dispatch(clearCart());
             }}
           >
             Confirm
           </button>
-          <button type="button" className="btn clear-btn">
+          <button
+            type="button"
+            className="btn clear-btn"
+            onClick={() => {
+              dispatch(closeModal());
+            }}
+          >
             Cancel
           </button>
         </div>
