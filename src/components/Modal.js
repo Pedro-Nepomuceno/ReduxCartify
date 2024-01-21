@@ -16,6 +16,7 @@ function Modal() {
             className="btn confirm-btn"
             onClick={() => {
               dispatch(clearCart());
+              dispatch(closeModal());
             }}
           >
             Confirm
