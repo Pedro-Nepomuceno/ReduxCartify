@@ -4,7 +4,7 @@ Application developed with the intention of learning and applying Redux
 
 Libraries used
 
-# Redux Tolkit
+- Redux Tolkit
 
 - setting up and working with Redux traditionally involves writing a significant amount of boilerplate code.
 - Redux Toolkit provides several utilities to streamline the Redux development process such as :
@@ -15,7 +15,7 @@ Libraries used
 
 . createAsyncThunk: A utility to simplify the process of handling asynchronous actions (e.g., API calls) in a Redux application.
 
-# Axios
+- Axios
 
 - Axios can be used to make asynchronous HTTP requests, such as fetching data from a server or sending data to a server
 - Axios can be integrated into Redux Thunk middleware to make API calls and update the Redux store with the received data
