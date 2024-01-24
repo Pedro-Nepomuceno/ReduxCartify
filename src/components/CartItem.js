@@ -33,7 +33,7 @@ export const CartItem = ({ id, img, price, title, amount }) => {
         <button
           className="amount-btn"
           onClick={() => {
-            dispatch(decrease(id));
+            dispatch(decrease({ id }));
           }}
         >
           <ChevronDown />

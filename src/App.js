@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   const handleCalculateTotals = useCallback(() => {
-    dispatch(calculateTotals());
+    dispatch(calculateTotals(""));
   }, [dispatch]);
 
   useEffect(() => {
