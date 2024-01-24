@@ -4,6 +4,7 @@ import { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { calculateTotals, getCartItems } from "./cart/cartSlice";
 import Modal from "./components/Modal";
+import { CartItem } from "./components/CartItem";
 
 function App() {
   const { cartItems, isLoading } = useSelector((store) => store.cart);
@@ -20,7 +21,9 @@ function App() {
   }, [cartItems, handleCalculateTotals]);
 
   useEffect(() => {
-    dispatch(getCartItems());
+    dispatch(getCartItems()).then((item) => {
+      console.log(item);
+    });
   }, []);
 
   if (isLoading) {
