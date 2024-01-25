@@ -1,6 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { calculateTotals, getCartItems } from "./cart/cartSlice";
 import Modal from "./components/Modal";
@@ -9,6 +9,7 @@ import { CartItem } from "./components/CartItem";
 function App() {
   const { cartItems, isLoading } = useSelector((store) => store.cart);
   const { isOpen } = useSelector((store) => store.modal);
+  const [LocalCartItems, setCartItems] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -21,10 +22,13 @@ function App() {
   }, [cartItems, handleCalculateTotals]);
 
   useEffect(() => {
-    dispatch(getCartItems()).then((item) => {
-      console.log(item);
+    dispatch(getCartItems()).then((items) => {
+      if (Array.isArray(items)) {
+        setCartItems(items);
+      }
+      console.log(LocalCartItems);
     });
-  }, []);
+  }, [dispatch, LocalCartItems]);
 
   if (isLoading) {
     return (
@@ -38,7 +42,11 @@ function App() {
     <main>
       {isOpen && <Modal />}
       <Navbar />
-      <CartContainer />
+      <CartContainer>
+        {LocalCartItems.map((element) => (
+          <CartItem key={element.id} {...element} />
+        ))}
+      </CartContainer>
     </main>
   );
 }

@@ -24,11 +24,11 @@ const CartContainer = () => {
       <header>
         <h2>Your bag</h2>
       </header>
-      <div>
+      {/* <div>
         {cartItems.map((item) => {
           return <CartItem key={item.id} {...item} />;
         })}
-      </div>
+      </div> */}
       <hr />
       <footer>
         <div className="cart-total">
