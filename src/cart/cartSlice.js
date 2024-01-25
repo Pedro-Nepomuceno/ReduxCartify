@@ -14,10 +14,10 @@ export const getCartItems = createAsyncThunk(
   "cart/getCartItems",
   async (name, thunkApi) => {
     try {
-      const resp = await axios(url);
+      const resp = await axios.get(url);
       return resp.data;
     } catch (error) {
-      return error.resp;
+      return error.response.data;
     }
   }
 );
