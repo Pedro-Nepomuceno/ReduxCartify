@@ -4,7 +4,6 @@ import { useEffect, useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { calculateTotals, getCartItems } from "./cart/cartSlice";
 import Modal from "./components/Modal";
-import { CartItem } from "./components/CartItem";
 
 function App() {
   const { cartItems, isLoading } = useSelector((store) => store.cart);
