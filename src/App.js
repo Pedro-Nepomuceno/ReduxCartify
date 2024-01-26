@@ -41,11 +41,7 @@ function App() {
     <main>
       {isOpen && <Modal />}
       <Navbar />
-      <CartContainer>
-        {cartItems.map((element) => (
-          <CartItem key={element.id} {...element} />
-        ))}
-      </CartContainer>
+      <CartContainer />
     </main>
   );
 }
