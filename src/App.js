@@ -26,7 +26,6 @@ function App() {
       if (Array.isArray(items)) {
         setCartItems(items);
       }
-      console.log(LocalCartItems);
     });
   }, [dispatch, LocalCartItems]);
 
@@ -43,7 +42,7 @@ function App() {
       {isOpen && <Modal />}
       <Navbar />
       <CartContainer>
-        {LocalCartItems.map((element) => (
+        {cartItems.map((element) => (
           <CartItem key={element.id} {...element} />
         ))}
       </CartContainer>
