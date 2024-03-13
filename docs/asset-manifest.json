@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Super-Cart/%20/static/css/main.a1407077.css",
+    "main.js": "/Super-Cart/%20/static/js/main.61ef5dbb.js",
+    "index.html": "/Super-Cart/%20/index.html",
+    "main.a1407077.css.map": "/Super-Cart/%20/static/css/main.a1407077.css.map",
+    "main.61ef5dbb.js.map": "/Super-Cart/%20/static/js/main.61ef5dbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1407077.css",
+    "static/js/main.61ef5dbb.js"
+  ]
+}
