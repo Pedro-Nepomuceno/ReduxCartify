@@ -1,6 +1,6 @@
-# Super Cart App
+# ReduxCartify
 
-Application developed with the intention of learning and applying Redux
+A simple and yet powerfull application that uses Redux for managing and centralizing application state
 
 Libraries used
 
